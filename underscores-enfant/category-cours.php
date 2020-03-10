@@ -24,19 +24,19 @@ get_header();
 			<li><a href="#">Événement</a></li>
 			<li><a href="#">Nouvelle</a></li>
 		</ul>
-		<!-- <div class ="site-main" style="display: grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(6, 1fr);"> grille -->
+		<div class ="site-main" style="display: grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(6, 1fr);"> <!--  grille -->
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		// while ( have_posts() ) :
+		// 	the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+		// 	get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+		// 	// If comments are open or we have at least one comment, load up the comment template.
+		// 	if ( comments_open() || get_comments_number() ) :
+		// 		comments_template();
+		// 	endif;
 
-		endwhile; // End of the loop.
+		// endwhile; // End of the loop.
 
 		$args = array(
             "category_name" => "cours",
@@ -49,10 +49,10 @@ get_header();
 		while ( $query1->have_posts() ) {   //substr(get_post_field("post_name"), -2)
 			$query1->the_post();
 			$i++;
-			echo '<h4>' . $i . '.  ' . '<a href=' . get_post_permalink() . '>' . get_the_title() . '</a>' . ' - ' . '<span class="session">' ."session: " . substr(get_the_title(),4,1) . '</span>' . ' - ' . 'domaine - '. substr(get_the_title(),5,1) . '</h4>';
+			//echo '<h4>' . $i . '.  ' . '<a href=' . get_post_permalink() . '>' . get_the_title() . '</a>' . ' - ' . '<span class="session">' ."session: " . substr(get_the_title(),4,1) . '</span>' . ' - ' . 'domaine - '. substr(get_the_title(),5,1) . '</h4>';
 			 
 
-			 /*for($i = 0; $i<29; $i++){
+			 for($i = 0; $i<29; $i++){
 				$rangee = substr(get_the_title(),4,1); // Représente les rangées (sessions)
 				$colonne = substr(get_the_title(),5,1); // Représente les colonnes (domaines)
 
@@ -101,10 +101,10 @@ get_header();
 				}
 				$gridArea = $rangee ."/". $colonne ;
 			 }
-			 echo '<h3 style="grid-area:'.$gridArea.'">' . get_the_title() . '</h3>';*/
+			 echo '<div class ="titreDesCours" style="grid-area:'. $gridArea.'">' . '<h3>' . get_the_title() . '</h3>' . '</div>';
 		}
 		?>
-		<!-- </div> grille -->
+		</div> <!--  grille -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

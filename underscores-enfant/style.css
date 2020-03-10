@@ -42,4 +42,12 @@
 .nav li:active {
   background-color: #b6aa00;
 }
+
+.titreDesCours {
+  margin: 0;
+}
+
+.titreDesCours div {
+  margin-bottom: 40px;
+}
 /*# sourceMappingURL=style.css.map */

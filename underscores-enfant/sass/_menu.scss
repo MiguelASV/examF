@@ -40,10 +40,23 @@
     }
 }
 
-.titreDesCours {
-    margin : 0;
-    div {
-        margin-bottom: 40px;
-    }
-    
+
+.r1 {
+    background-color: lighten($couleur_bleu, 10%);
+}
+
+.r2 {
+    background-color: lighten($couleur_bleu, 20%);
+}
+
+.r3 {
+    background-color: lighten($couleur_bleu, 30%);
+}
+
+.r4 {
+    background-color: lighten($couleur_bleu, 40%);
+}
+
+.r5 {
+    background-color: lighten($couleur_bleu, 50%);
 }

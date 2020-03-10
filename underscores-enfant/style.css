@@ -43,11 +43,23 @@
   background-color: #b6aa00;
 }
 
-.titreDesCours {
-  margin: 0;
+.r1 {
+  background-color: #143fb4;
 }
 
-.titreDesCours div {
-  margin-bottom: 40px;
+.r2 {
+  background-color: #194fe2;
+}
+
+.r3 {
+  background-color: #4471ea;
+}
+
+.r4 {
+  background-color: #7294ef;
+}
+
+.r5 {
+  background-color: #a0b6f4;
 }
 /*# sourceMappingURL=style.css.map */

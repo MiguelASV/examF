@@ -24,7 +24,7 @@ get_header();
 			<li><a href="#">Événement</a></li>
 			<li><a href="#">Nouvelle</a></li>
 		</ul>
-		<div class ="site-main" style="display: grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(6, 1fr);"> <!--  grille -->
+		<div class ="site-main" style="display: grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(7, 1fr);"> <!--  grille -->
 		<?php
 		// while ( have_posts() ) :
 		// 	the_post();
@@ -59,22 +59,22 @@ get_header();
 				switch ($rangee) {
 
 					case 1:
-					$rangee=1;
-						break;
-					case 2:
 					$rangee=2;
 						break;
-					case 3:
+					case 2:
 					$rangee=3;
 						break;
-					case 4:
+					case 3:
 					$rangee=4;
 						break;
-					case 5:
+					case 4:
 					$rangee=5;
 						break;
-					case 6:
+					case 5:
 					$rangee=6;
+						break;
+					case 6:
+					$rangee=7;
 						break;
 			
 					default: $rangee=0;
@@ -99,10 +99,34 @@ get_header();
 			
 					default: $colonne=0;
 				}
-				$gridArea = $rangee ."/". $colonne ;
-			 }
-			 echo '<div class ="titreDesCours" style="grid-area:'. $gridArea.'">' . '<h3>' . get_the_title() . '</h3>' . '</div>';
-		}
+                $gridArea = $rangee ."/". $colonne ;
+             }
+             
+             if ($colonne == 1) {
+                $style = "r1";
+             }
+             if ($colonne == 2) {
+                $style = "r2";
+             }
+             if ($colonne == 3) {
+                $style = "r3";
+             }
+             if ($colonne == 4) {
+                $style = "r4";
+             }
+             if ($colonne == 5) {
+                $style = "r5";
+             }
+             
+            echo '<h3 style="grid-area:'.$gridArea.'">' . get_the_title() . '</h3>';
+            /*echo '<div class =" style= grid-area:' . $gridArea. '">' . '<h3>' . get_the_title() . '</h3>' . '</div>';*/
+            
+        }
+            echo '<h3 style="grid-area:1/1">Environnement</h3>';
+            echo '<h3 style="grid-area:1/2">Animation</h3>';
+            echo '<h3 style="grid-area:1/3">Design</h3>';
+            echo '<h3 style="grid-area:1/4">Programmation</h3>';
+            echo '<h3 style="grid-area:1/5">Intégration</h3>';
 		?>
 		</div> <!--  grille -->
 		</main><!-- #main -->

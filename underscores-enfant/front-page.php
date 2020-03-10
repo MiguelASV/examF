@@ -33,7 +33,9 @@ get_header();
 
 		$args = array(
             "category_name" => "cours",
-            "posts_per_page"=> 10,
+			"posts_per_page"=> 29,
+			"orderby"=> "title",
+			"order"=> "ASC"
 		);
 		$query1 = new WP_Query($args);
 		while ( $query1->have_posts() ) {   //substr(get_post_field("post_name"), -2)

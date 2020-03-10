@@ -37,10 +37,12 @@ get_header();
 			"orderby"=> "title",
 			"order"=> "ASC"
 		);
+		$i = 1;
 		$query1 = new WP_Query($args);
 		while ( $query1->have_posts() ) {   //substr(get_post_field("post_name"), -2)
 			$query1->the_post();
-			 echo '<h4>' . get_the_title() . '</h4>'; 
+			 echo '<h4>' . $i . '.  ' . '<a href="#">' . get_the_title() . '</a>' . ' - ' . '<span class="session">' ."session: " . substr(get_the_title(),4,1) . '</span>' . ' - ' . '</h4>';
+			 $i++; 
 		}
 		?>
 

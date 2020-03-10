@@ -22,3 +22,20 @@
 .session {
     color: red;
 }
+
+.nav {
+    margin: 0;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        &:hover {
+            background-color: $couleur_vert;
+        }
+        &:focus {
+            background-color: $couleur_rouge;
+        }
+        &:active {
+            background-color: $couleur_jaune;
+        }
+    }
+}

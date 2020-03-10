@@ -21,4 +21,25 @@
 .session {
   color: red;
 }
+
+.nav {
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav li:hover {
+  background-color: #00f05c;
+}
+
+.nav li:focus {
+  background-color: #e20000;
+}
+
+.nav li:active {
+  background-color: #b6aa00;
+}
 /*# sourceMappingURL=style.css.map */

@@ -18,6 +18,13 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+		<ul class = "nav">
+			<li><a href="http://localhost/miguel-exam/category/cours">Cours</a></li>
+			<li><a href="#">Atelier</a></li>
+			<li><a href="#">Événement</a></li>
+			<li><a href="#">Nouvelle</a></li>
+		</ul>
+
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -41,7 +48,7 @@ get_header();
 		$query1 = new WP_Query($args);
 		while ( $query1->have_posts() ) {   //substr(get_post_field("post_name"), -2)
 			$query1->the_post();
-			 echo '<h4>' . $i . '.  ' . '<a href="#">' . get_the_title() . '</a>' . ' - ' . '<span class="session">' ."session: " . substr(get_the_title(),4,1) . '</span>' . ' - ' . '</h4>';
+			 echo '<h4>' . $i . '.  ' . '<a href=' . get_post_permalink() . '>' . get_the_title() . '</a>' . ' - ' . '<span class="session">' ."session: " . substr(get_the_title(),4,1) . '</span>' . ' - ' . 'domaine - '. substr(get_the_title(),5,1) . '</h4>';
 			 $i++; 
 		}
 		?>

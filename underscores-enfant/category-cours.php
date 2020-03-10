@@ -118,7 +118,7 @@ get_header();
                 $style = "r5";
              }
              
-            echo '<h3 style="grid-area:'.$gridArea.'">' . get_the_title() . '</h3>';
+            echo '<h3 class= '.$style.' style="grid-area:'.$gridArea.'">' . get_the_title() . '</h3>';
             /*echo '<div class =" style= grid-area:' . $gridArea. '">' . '<h3>' . get_the_title() . '</h3>' . '</div>';*/
             
         }
